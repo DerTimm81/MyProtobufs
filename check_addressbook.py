@@ -21,13 +21,20 @@ print "Name of the person:\t " + person.name
 if phone.type is addressbook_pb2.Person.HOME :
     print "Phone number is:\t " + phone.number + " (Home)"
     pass
-
-# print "Given Phone number: " + person.phone.number + "(" + person.phone.type + ")"
 print "------------------------"
 
 
+# writes the protobuf stream on a binary file on disk
 with open('generatedOutputMessage.bin', 'wb') as f:
     f.write(person.SerializeToString())
 
+# display the size of the written file
 statinfo = os.stat('generatedOutputMessage.bin')
 print statinfo.st_size
+
+# here we check, if we can read the just dumped data
+with open('generatedOutputMessage.bin', 'rb') as f:
+    person = addressbook_pb2.Person()
+    person.ParseFromString(f.read())
+
+print person.name
