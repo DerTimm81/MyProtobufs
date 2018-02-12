@@ -17,16 +17,16 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='addressbook.proto',
-  package='',
+  package='tutorial',
   syntax='proto3',
-  serialized_pb=_b('\n\x11\x61\x64\x64ressbook.proto\"\xc3\x01\n\x06Person\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\x05\x12\r\n\x05\x65mail\x18\x03 \x01(\t\x12#\n\x06phones\x18\x04 \x03(\x0b\x32\x13.Person.PhoneNumber\x1a>\n\x0bPhoneNumber\x12\x0e\n\x06number\x18\x01 \x01(\t\x12\x1f\n\x04type\x18\x02 \x01(\x0e\x32\x11.Person.PhoneType\"+\n\tPhoneType\x12\n\n\x06MOBILE\x10\x00\x12\x08\n\x04HOME\x10\x01\x12\x08\n\x04WORK\x10\x02\"&\n\x0b\x41\x64\x64ressBook\x12\x17\n\x06people\x18\x01 \x03(\x0b\x32\x07.Personb\x06proto3')
+  serialized_pb=_b('\n\x11\x61\x64\x64ressbook.proto\x12\x08tutorial\"\xd5\x01\n\x06Person\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\n\n\x02id\x18\x02 \x01(\x05\x12\r\n\x05\x65mail\x18\x03 \x01(\t\x12,\n\x06phones\x18\x04 \x03(\x0b\x32\x1c.tutorial.Person.PhoneNumber\x1aG\n\x0bPhoneNumber\x12\x0e\n\x06number\x18\x01 \x01(\t\x12(\n\x04type\x18\x02 \x01(\x0e\x32\x1a.tutorial.Person.PhoneType\"+\n\tPhoneType\x12\n\n\x06MOBILE\x10\x00\x12\x08\n\x04HOME\x10\x01\x12\x08\n\x04WORK\x10\x02\"/\n\x0b\x41\x64\x64ressBook\x12 \n\x06people\x18\x01 \x03(\x0b\x32\x10.tutorial.Personb\x06proto3')
 )
 
 
 
 _PERSON_PHONETYPE = _descriptor.EnumDescriptor(
   name='PhoneType',
-  full_name='Person.PhoneType',
+  full_name='tutorial.Person.PhoneType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -45,28 +45,28 @@ _PERSON_PHONETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=174,
-  serialized_end=217,
+  serialized_start=202,
+  serialized_end=245,
 )
 _sym_db.RegisterEnumDescriptor(_PERSON_PHONETYPE)
 
 
 _PERSON_PHONENUMBER = _descriptor.Descriptor(
   name='PhoneNumber',
-  full_name='Person.PhoneNumber',
+  full_name='tutorial.Person.PhoneNumber',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='number', full_name='Person.PhoneNumber.number', index=0,
+      name='number', full_name='tutorial.Person.PhoneNumber.number', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='type', full_name='Person.PhoneNumber.type', index=1,
+      name='type', full_name='tutorial.Person.PhoneNumber.type', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -84,40 +84,40 @@ _PERSON_PHONENUMBER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=110,
-  serialized_end=172,
+  serialized_start=129,
+  serialized_end=200,
 )
 
 _PERSON = _descriptor.Descriptor(
   name='Person',
-  full_name='Person',
+  full_name='tutorial.Person',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='name', full_name='Person.name', index=0,
+      name='name', full_name='tutorial.Person.name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='id', full_name='Person.id', index=1,
+      name='id', full_name='tutorial.Person.id', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='email', full_name='Person.email', index=2,
+      name='email', full_name='tutorial.Person.email', index=2,
       number=3, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='phones', full_name='Person.phones', index=3,
+      name='phones', full_name='tutorial.Person.phones', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -136,20 +136,20 @@ _PERSON = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=22,
-  serialized_end=217,
+  serialized_start=32,
+  serialized_end=245,
 )
 
 
 _ADDRESSBOOK = _descriptor.Descriptor(
   name='AddressBook',
-  full_name='AddressBook',
+  full_name='tutorial.AddressBook',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='people', full_name='AddressBook.people', index=0,
+      name='people', full_name='tutorial.AddressBook.people', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -167,8 +167,8 @@ _ADDRESSBOOK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=219,
-  serialized_end=257,
+  serialized_start=247,
+  serialized_end=294,
 )
 
 _PERSON_PHONENUMBER.fields_by_name['type'].enum_type = _PERSON_PHONETYPE
@@ -185,12 +185,12 @@ Person = _reflection.GeneratedProtocolMessageType('Person', (_message.Message,),
   PhoneNumber = _reflection.GeneratedProtocolMessageType('PhoneNumber', (_message.Message,), dict(
     DESCRIPTOR = _PERSON_PHONENUMBER,
     __module__ = 'addressbook_pb2'
-    # @@protoc_insertion_point(class_scope:Person.PhoneNumber)
+    # @@protoc_insertion_point(class_scope:tutorial.Person.PhoneNumber)
     ))
   ,
   DESCRIPTOR = _PERSON,
   __module__ = 'addressbook_pb2'
-  # @@protoc_insertion_point(class_scope:Person)
+  # @@protoc_insertion_point(class_scope:tutorial.Person)
   ))
 _sym_db.RegisterMessage(Person)
 _sym_db.RegisterMessage(Person.PhoneNumber)
@@ -198,7 +198,7 @@ _sym_db.RegisterMessage(Person.PhoneNumber)
 AddressBook = _reflection.GeneratedProtocolMessageType('AddressBook', (_message.Message,), dict(
   DESCRIPTOR = _ADDRESSBOOK,
   __module__ = 'addressbook_pb2'
-  # @@protoc_insertion_point(class_scope:AddressBook)
+  # @@protoc_insertion_point(class_scope:tutorial.AddressBook)
   ))
 _sym_db.RegisterMessage(AddressBook)
 
