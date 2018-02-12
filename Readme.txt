@@ -1,7 +1,7 @@
 
 Please call
 
-protoc -I=. --python_out=./protobuf addressbook.proto
+protoc -I=. --python_out=./protobuf_out addressbook.proto
 
 to compile the protobuf.
 
