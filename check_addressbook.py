@@ -1,4 +1,5 @@
 import sys
+import os
 from protobuf_out import addressbook_pb2
 
 print "Hello."
@@ -23,3 +24,10 @@ if phone.type is addressbook_pb2.Person.HOME :
 
 # print "Given Phone number: " + person.phone.number + "(" + person.phone.type + ")"
 print "------------------------"
+
+
+with open('generatedOutputMessage.bin', 'wb') as f:
+    f.write(person.SerializeToString())
+
+statinfo = os.stat('generatedOutputMessage.bin')
+print statinfo.st_size
